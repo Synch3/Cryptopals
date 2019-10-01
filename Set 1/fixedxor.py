@@ -15,13 +15,11 @@
 import codecs
 
 def xorcombination(string1, string2):
-    decoded1 = codecs.encode(codecs.decode(string1, 'hex'), 'base64').decode()
-    decoded2 = codecs.encode(codecs.decode(string2, 'hex'), 'base64').decode()
+   xored = hex(int(string1, 16) ^ int(string2, 16))
+   print(xored)
+   return xored
 
-    xored = ord(a) ^ ord(b) for a,b in zip(decoded1, decoded2)
 
-    print(xored)
-    return xored
 
 
 
