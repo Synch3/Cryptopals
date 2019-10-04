@@ -7,3 +7,12 @@
 # You can do this by hand. But don't: write code to do it for you.
 
 # How? Devise some method for "scoring" a piece of English plaintext. Character frequency is a good metric. Evaluate each output and choose the one with the best score. 
+
+
+
+def singlebytexor:
+    output = b''
+
+
+def scoring:
+    
