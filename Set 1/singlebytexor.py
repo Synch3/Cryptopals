@@ -8,9 +8,10 @@
 
 # How? Devise some method for "scoring" a piece of English plaintext. Character frequency is a good metric. Evaluate each output and choose the one with the best score. 
 
+import binascii
 
-
-def singlebytexor:
+def singlebytexor(code):
+    uncoded = binascii.unhexlify(code)
     output = b''
 
 
