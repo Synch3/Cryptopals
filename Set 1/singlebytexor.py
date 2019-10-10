@@ -34,9 +34,20 @@ def scoring(message):
 
     freqPairs = list(frequency.items())
     freqPairs.sort(reverse=True)
-
+    stringOrder = []
     print(freqPairs)
+    for freqPair in freqPairs:
+        stringOrder.append(freqPair[1])
+    
+    print(stringOrder)
+
+    stringJoined = str.join('', stringOrder)
+    
+    print(stringJoined)
+
+    points = 0
+    # for commonLetter in ETAOIN[:6]
+    #     if commonLetter in freqPairs
 
 
-
-scoring('Check me out')
+scoring('Check me out this needs to be a longer string so the count works')
