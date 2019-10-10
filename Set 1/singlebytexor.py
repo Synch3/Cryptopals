@@ -25,10 +25,13 @@ def scoring(message):
 
     print(letterCount)
 
-    frequency = {number: letter for letter, number in letterCount.items()}
+    frequency = {}
+    for letter, number in letterCount.items():
+        frequency[number] = frequency.get(number, [])
+        frequency[number].append(letter)
     
     print(frequency)
-    
+
     freqPairs = list(frequency.items())
     freqPairs.sort(reverse=True)
 
