@@ -46,8 +46,8 @@ def scoring(message):
     print(stringJoined)
 
     points = 0
-    # for commonLetter in ETAOIN[:6]
-    #     if commonLetter in freqPairs
+    for commonLetter in ETAOIN[:6]
+        if commonLetter in freqPairs
 
 
 scoring('Check me out this needs to be a longer string so the count works')
