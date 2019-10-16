@@ -14,8 +14,8 @@ def singlebytexor(code):
     LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     pointarray = []
     for letter in LETTERS:
-        pointarray.append(scoring(int(code, 16) ^ int(letter, 16)))
-    print(pointarray)
+        pointarray.append(scoring(str(int(code, 16) ^ int(letter, 16))))
+    print(pointarray, 'pointarray')
     return pointarray
 
 
@@ -40,7 +40,7 @@ def scoring(message):
         stringOrder.append(freqPair[1])
     
     stringJoined = [item for sublist in stringOrder for item in sublist]
-    print (stringJoined)
+    print ('stringjoined', stringJoined)
     stringJoined = ''.join(stringJoined)
 
     points = 0
