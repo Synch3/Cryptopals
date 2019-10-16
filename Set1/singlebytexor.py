@@ -10,8 +10,13 @@
 
 import binascii
 
-# def singlebytexor(code):
-#     
+def singlebytexor(code):
+    LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    pointarray = []
+    for letter in LETTERS:
+        pointarray.append(scoring(int(code, 16) ^ int(letter, 16)))
+    print(pointarray)
+    return pointarray
 
 
 def scoring(message):
@@ -51,4 +56,4 @@ def scoring(message):
     return points
 
 
-scoring('Check me out this needs to be a longer string so the count works')
+singlebytexor('1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736')
