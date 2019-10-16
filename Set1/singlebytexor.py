@@ -23,31 +23,32 @@ def scoring(message):
         if letter in LETTERS:
             letterCount[letter] +=1
 
-    print(letterCount)
-
     frequency = {}
     for letter, number in letterCount.items():
         frequency[number] = frequency.get(number, [])
         frequency[number].append(letter)
-    
-    print(frequency)
 
     freqPairs = list(frequency.items())
     freqPairs.sort(reverse=True)
     stringOrder = []
-    print(freqPairs)
     for freqPair in freqPairs:
         stringOrder.append(freqPair[1])
     
-    print(stringOrder)
-
-    stringJoined = str.join('', stringOrder)
-    
-    print(stringJoined)
+    stringJoined = [item for sublist in stringOrder for item in sublist]
+    print (stringJoined)
+    stringJoined = ''.join(stringJoined)
 
     points = 0
-    for commonLetter in ETAOIN[:6]
-        if commonLetter in freqPairs
+    for commonLetter in ETAOIN[:6]:
+        if commonLetter in stringJoined[:6]:
+            points += 1
+    
+    for blehletter in ETAOIN[-6:]:
+        if blehletter in stringJoined[-6:]:
+            points += 1
+    
+    print(points)
+    return points
 
 
 scoring('Check me out this needs to be a longer string so the count works')
