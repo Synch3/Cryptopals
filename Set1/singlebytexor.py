@@ -14,7 +14,10 @@ def singlebytexor(code):
     LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     pointarray = []
     for letter in LETTERS:
-        pointarray.append(scoring(str(int(code, 16) ^ int(letter, 16))))
+        print(letter)
+        xoredstring = str(int(code, 16) ^ int(hex(ord(letter)), 16))
+        print(xoredstring)
+        pointarray.append(scoring(xoredstring))
     print(pointarray, 'pointarray')
     return pointarray
 
